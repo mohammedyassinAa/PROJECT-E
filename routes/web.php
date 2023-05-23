@@ -46,10 +46,12 @@ Route::middleware(['auth', 'verified', 'admin'])->group(function () {
 
     Route::resource('products', ProductsController::class);
     Route::get('/products', [ProductsController::class, 'index'])->name('products.index');
+    Route::get('/products/create', [CategoriesController::class, 'create'])->name('products.create');
     Route::post('/products', [ProductsController::class, 'store'])->name('products.store');
     Route::delete('/products/{id}', [ProductsController::class , 'destroy'])->name('products.destroy');
     Route::get('/products/edit/{product}', [ProductsController::class , 'edit'])->name('products.edit');
-    Route::put('/products/edit/{product}', [ProductsController::class , 'update'])->name('products.update');
+    Route::put('/products/edit/{product}', [ProductsController::class,'update'])->name('products.update');
+
 
     Route::get('/categories', [CategoriesController::class, 'index'])->name('categories');
     Route::get('/categories/create', [CategoriesController::class, 'create'])->name('categories.create');

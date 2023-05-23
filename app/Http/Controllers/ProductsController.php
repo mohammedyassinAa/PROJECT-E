@@ -85,7 +85,9 @@ class ProductsController extends Controller
         $filename = time() . '_' . $image->getClientOriginalName();
         $path = $image->storeAs('public/uploads', $filename);
         $image = $filename;
-    }
+    } else {
+    $image = $product->image;
+}
 
     $product->update([
         'name' => $request->name,
@@ -99,9 +101,10 @@ class ProductsController extends Controller
      * Show the form for editing the specified resource.
      */
     public function edit(Product $product)
-    {
-        return view('products.edit', compact('product'));
-    }
+{
+    return view('products.edit', compact('product'));
+}
+
     
     public function show($id)
     {

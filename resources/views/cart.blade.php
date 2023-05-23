@@ -43,7 +43,7 @@
     </tr> --}}
     <tr>
         <td colspan="6" class="text-right px-4 py-2">
-            <a href="{{ url('/dashboard') }}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Continue Shopping</a>
+            <a href="{{ url('/') }}" class="bg-blue-500 text-white px-4 py-2 rounded hover:bg-blue-600">Continue Shopping</a>
             {{-- <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600">Checkout</button> --}}
             <a class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600" href="{{ route('email') }}">Checkout</a>
         </td>

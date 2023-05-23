@@ -10,19 +10,19 @@
                 @csrf
                 @method("PUT")
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2" for="namepr">
+                    <label class="block text-gray-700 font-bold mb-2" for="name">
                         Name:
                     </label>            
                     <input type="text" name="name" id="name" value="{{ $product->name }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Name">
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2" for="pricepr">
+                    <label class="block text-gray-700 font-bold mb-2" for="price">
                         Price :
                     </label>            
-                    <input type="text" name="price" id="price" value="{{ $product->price }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Price">
+                    <input type="number" name="price" id="price" value="{{ $product->price }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Price">
                 </div>
                 <div class="mb-4">
-                    <label class="block text-gray-700 font-bold mb-2" for="imagepr">
+                    <label class="block text-gray-700 font-bold mb-2" for="image">
                         Choose an image for your product
                     </label>
                     <input type="file" name="image" id="image" value="{{ $product->image }}" class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline" placeholder="Image">

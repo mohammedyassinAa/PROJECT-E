@@ -20,11 +20,11 @@ class PDFController extends Controller
         $data = [
             'title' => 'Welcome to YSN Shop',
             'date' => date('m/d/Y'),
-            'products' => $products
+            // 'products' => $products
         ]; 
             
         $pdf = PDF::loadView('products.index', $data);
-    
+        dd($products);
         return $pdf->download('products.pdf');
     }
 }

@@ -45,8 +45,6 @@ class CategoriesController extends Controller
     public function update(Request $request, $id)
     {
         
-        // dd($request->all()); // Add this line to check the request data
-
         $validatedData = $request->validate([
             'name' => 'required'
         ]);

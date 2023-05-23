@@ -1,6 +1,6 @@
 <x-app-layout>
     <div class="flex flex-col items-center">
-        <h2 class="text-2xl font-bold mb-4">Add New Product</h2>
+        <h2 class="text-2xl font-bold mb-4">Add New Category</h2>
         <div class="w-full max-w-md">
             @if ($errors->any())
                 <!-- Error messages here -->
